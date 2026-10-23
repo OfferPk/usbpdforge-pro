@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e"/>
+      <stop offset="100%" stop-color="#0f141f"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#0077b6"/>
+    </linearGradient>
+    <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bd00ff"/>
+      <stop offset="100%" stop-color="#4a0072"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="620" fill="url(#bgGrad)"/>
+  <rect x="20" y="20" width="960" height="580" rx="14" fill="#121826" fill-opacity="0.8" stroke="#00e5ff" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- Top App Bar -->
+  <rect x="20" y="20" width="960" height="60" rx="14" fill="#090d14" stroke="#00e5ff" stroke-opacity="0.2"/>
+  <circle cx="50" cy="50" r="14" fill="url(#cyanGrad)" filter="url(#glow)"/>
+  <text x="75" y="55" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">USBPDForge Pro <tspan fill="#bd00ff" font-size="14">v1.0.0</tspan></text>
+  <text x="280" y="55" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8c9cb5">USB-PD 3.1 &amp; EPR (240W) Protocol Studio &amp; Safety Auditor</text>
+  
+  <rect x="740" y="38" width="100" height="24" rx="12" fill="#00e5ff" fill-opacity="0.15" stroke="#00e5ff" stroke-width="1"/>
+  <text x="755" y="54" font-family="monospace" font-size="11" font-weight="bold" fill="#00e5ff">PD 3.1 EPR</text>
+
+  <rect x="850" y="38" width="110" height="24" rx="12" fill="#bd00ff" fill-opacity="0.15" stroke="#bd00ff" stroke-width="1"/>
+  <text x="865" y="54" font-family="monospace" font-size="11" font-weight="bold" fill="#e085ff">240W 48V 5A</text>
+
+  <!-- Navigation Tabs -->
+  <rect x="40" y="96" width="180" height="34" rx="6" fill="#00e5ff" fill-opacity="0.2" stroke="#00e5ff"/>
+  <text x="56" y="118" font-family="sans-serif" font-size="13" font-weight="bold" fill="#00e5ff">1. Packet Studio</text>
+
+  <rect x="230" y="96" width="170" height="34" rx="6" fill="#0f141f" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="246" y="118" font-family="sans-serif" font-size="13" fill="#8c9cb5">2. Power Negotiator</text>
+
+  <rect x="410" y="96" width="170" height="34" rx="6" fill="#0f141f" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="426" y="118" font-family="sans-serif" font-size="13" fill="#8c9cb5">3. Cable E-Marker</text>
+
+  <rect x="590" y="96" width="170" height="34" rx="6" fill="#0f141f" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="606" y="118" font-family="sans-serif" font-size="13" fill="#8c9cb5">4. Safety Auditor</text>
+
+  <rect x="770" y="96" width="170" height="34" rx="6" fill="#0f141f" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="786" y="118" font-family="sans-serif" font-size="13" fill="#8c9cb5">5. Logic &amp; PCAP</text>
+
+  <!-- Left Column: Header Builder Card -->
+  <rect x="40" y="146" width="430" height="430" rx="10" fill="#090d14" stroke="#00e5ff" stroke-opacity="0.2"/>
+  <text x="60" y="176" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">16-Bit Message Header &amp; PDOs</text>
+  
+  <rect x="60" y="200" width="180" height="36" rx="4" fill="#05070a" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="70" y="222" font-family="monospace" font-size="12" fill="#8c9cb5">SOP: Port-to-Port</text>
+
+  <rect x="260" y="200" width="190" height="36" rx="4" fill="#05070a" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="270" y="222" font-family="monospace" font-size="12" fill="#8c9cb5">Type: Source_Cap (0x01)</text>
+
+  <rect x="60" y="250" width="180" height="36" rx="4" fill="#05070a" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="70" y="272" font-family="monospace" font-size="12" fill="#8c9cb5">Role: Source (Provider)</text>
+
+  <rect x="260" y="250" width="190" height="36" rx="4" fill="#05070a" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="270" y="272" font-family="monospace" font-size="12" fill="#8c9cb5">Revision: Rev 3.1 (EPR)</text>
+
+  <text x="60" y="315" font-family="sans-serif" font-size="12" font-weight="bold" fill="#8c9cb5">Power Data Objects (PDOs Hex):</text>
+  <rect x="60" y="325" width="390" height="180" rx="6" fill="#05070a" stroke="#00e5ff" stroke-opacity="0.3"/>
+  <text x="75" y="350" font-family="monospace" font-size="12" fill="#00e5ff">PDO 1: 0x0801912C (Fixed 5V @ 3A / 15W)</text>
+  <text x="75" y="375" font-family="monospace" font-size="12" fill="#00e5ff">PDO 2: 0x0002D12C (Fixed 9V @ 3A / 27W)</text>
+  <text x="75" y="400" font-family="monospace" font-size="12" fill="#00e5ff">PDO 3: 0x0004B12C (Fixed 15V @ 3A / 45W)</text>
+  <text x="75" y="425" font-family="monospace" font-size="12" fill="#00e5ff">PDO 4: 0x000641F4 (Fixed 20V @ 5A / 100W)</text>
+  <text x="75" y="450" font-family="monospace" font-size="12" fill="#e085ff">PDO 5: 0x0088C1F4 (EPR Fixed 28V @ 5A / 140W)</text>
+  <text x="75" y="475" font-family="monospace" font-size="12" fill="#e085ff">PDO 6: 0xC802A364 (EPR AVS 15V-48V / 240W)</text>
+
+  <rect x="60" y="525" width="180" height="36" rx="6" fill="url(#cyanGrad)"/>
+  <text x="85" y="548" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Assemble Packet</text>
+
+  <!-- Right Column: Dissector & BMC View -->
+  <rect x="490" y="146" width="470" height="430" rx="10" fill="#090d14" stroke="#bd00ff" stroke-opacity="0.2"/>
+  <text x="510" y="176" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">BMC Dissector &amp; CRC-32 Engine</text>
+
+  <text x="510" y="210" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffab00">Wire Frame Bytes (Little Endian + CRC-32):</text>
+  <rect x="510" y="220" width="430" height="70" rx="6" fill="#05070a" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="525" y="248" font-family="monospace" font-size="11" fill="#ffab00">41 11 2c 91 01 08 2c d1 02 00 2c b1 04 00 f4 41 06 00</text>
+  <text x="525" y="270" font-family="monospace" font-size="11" fill="#ffab00">f4 c1 88 00 64 a3 02 c8 [CRC-32: 0x4D2A91F0]</text>
+
+  <text x="510" y="315" font-family="sans-serif" font-size="12" font-weight="bold" fill="#00e676">Dissected Message Structure:</text>
+  <rect x="510" y="325" width="430" height="180" rx="6" fill="#05070a" stroke="#00e676" stroke-opacity="0.2"/>
+  <text x="525" y="350" font-family="monospace" font-size="12" fill="#00e676">Header: Source_Capabilities [Rev 3.1 EPR, MsgID: 0]</text>
+  <text x="525" y="375" font-family="monospace" font-size="12" fill="#f0f4fc">Number of Data Objects: 6 PDOs (100W SPR + 140W/240W EPR)</text>
+  <text x="525" y="405" font-family="monospace" font-size="12" fill="#38bdf8">• 28V EPR Fixed: Active contract capable</text>
+  <text x="525" y="430" font-family="monospace" font-size="12" fill="#e085ff">• 48V EPR AVS: Up to 240.0 Watts maximum power</text>
+  <text x="525" y="455" font-family="monospace" font-size="12" fill="#00e676">Hardware Checksum: CRC-32 0x4D2A91F0 (VERIFIED)</text>
+
+  <rect x="510" y="525" width="200" height="36" rx="6" fill="url(#violetGrad)"/>
+  <text x="535" y="548" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">&#128190; Export Wireshark PCAP</text>
+</svg>
